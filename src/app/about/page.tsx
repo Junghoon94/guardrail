@@ -67,15 +67,15 @@ export default function About() {
         </div>
 
         <div className="card">
-          <h3>드론 안전필터에서 금융 안전필터로</h3>
+          <h3>자율비행 안전필터에서 금융 안전필터로</h3>
           <p className="muted" style={{ marginBottom: 10 }}>
-            드론 착륙 제어에서는 학습 기반 조종기가 어떤 명령을 내려도 기체가 안전 집합(장애물·속도·자세 한계)을 벗어나지 않도록, 명령을 최소한으로 수정하는 안전필터(Control Barrier Function, CBF)를 둡니다. 가드레일은 같은 구조를 금융 에이전트에 적용합니다.
+            드론 자율비행에서는 학습 기반·자율 조종기가 어떤 명령을 내려도 기체가 안전 집합(장애물 거리, 비행 구역, 속도·자세 한계)을 벗어나지 않도록, 명령을 최소한으로 수정하는 안전필터(Control Barrier Function, CBF)를 둡니다. 가드레일은 같은 구조를 금융 에이전트에 적용합니다.
           </p>
           <div className="table-wrap">
             <table>
               <thead>
                 <tr>
-                  <th>드론 안전필터</th>
+                  <th>드론 자율비행 안전필터</th>
                   <th>가드레일</th>
                 </tr>
               </thead>
@@ -85,7 +85,7 @@ export default function About() {
                   <td>LLM 에이전트(확률적·인젝션 가능)</td>
                 </tr>
                 <tr>
-                  <td>안전 집합: 장애물 거리, 속도·자세 한계</td>
+                  <td>안전 집합: 장애물 거리, 비행 구역, 속도·자세 한계</td>
                   <td>안전 집합: 한도, 화이트리스트, 쿨다운, 시간대, 금지 유형</td>
                 </tr>
                 <tr>
