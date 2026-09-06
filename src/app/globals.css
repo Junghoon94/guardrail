@@ -170,3 +170,44 @@ tr:hover td { background: #fafbfd; }
 .footer { text-align: center; color: var(--muted); font-size: 12.5px; padding: 30px 0 10px; }
 .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 .diagram { width: 100%; height: auto; }
+
+/* ---- App page grid ---- */
+.app-grid { display: grid; gap: 18px; grid-template-columns: minmax(0, 440px) 1fr; align-items: start; }
+.chips { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chip { flex: none; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-2); font-size: 12px; font-weight: 700; color: var(--primary); white-space: nowrap; }
+.chip:disabled { opacity: .5; }
+
+/* ---- Mobile ---- */
+@media (max-width: 900px) {
+  .container { padding: 14px 12px 40px; }
+  .nav-inner { height: auto; padding: 8px 12px; gap: 8px; flex-wrap: wrap; }
+  .brand { font-size: 15px; }
+  .nav-links { order: 3; flex-basis: 100%; margin-left: 0; flex-wrap: nowrap; overflow-x: auto; gap: 2px; padding-bottom: 2px; scrollbar-width: none; }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { padding: 6px 10px; font-size: 13px; white-space: nowrap; }
+  .nav-right { margin-left: auto; gap: 6px; }
+  .nav-right .pill { padding: 3px 8px; font-size: 11px; white-space: nowrap; }
+  .app-grid { grid-template-columns: 1fr; gap: 12px; }
+  .phone { max-width: 100%; padding: 0; background: transparent; border-radius: 0; box-shadow: none; }
+  .phone-screen { border-radius: 14px; border: 1px solid var(--border); height: auto; min-height: 520px; max-height: 78vh; }
+  .chat { min-height: 260px; }
+  .msg { max-width: 96%; font-size: 14px; }
+  .hero { padding: 18px 0 10px; gap: 18px; }
+  .hero h1 { font-size: 24px; }
+  .hero p.lead { font-size: 15px; margin: 10px 0 16px; }
+  .hero .row .btn.lg { padding: 11px 14px; font-size: 14px; flex: 1 1 auto; }
+  .stat b { font-size: 18px; }
+  .card { padding: 14px; border-radius: 12px; }
+  .card h3 { flex-wrap: wrap; }
+  .card h3 .sub { margin-left: 0; flex-basis: 100%; }
+  h2 { font-size: 20px !important; }
+  .kill { flex-basis: 100%; }
+  .btn.lg { padding: 12px 16px; font-size: 15px; }
+  .compare b { font-size: 14px; white-space: normal; }
+  .kv { grid-template-columns: 1fr; gap: 1px 0; }
+  .kv b { margin-top: 6px; }
+  table { font-size: 12px; }
+  th, td { padding: 7px 8px; }
+  .scenario b { font-size: 13.5px; }
+}
