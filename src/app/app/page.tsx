@@ -95,7 +95,7 @@ export default function UserApp() {
 
   return (
     <main className="container">
-      <div className="grid" style={{ gridTemplateColumns: "minmax(0, 440px) 1fr", alignItems: "start" }}>
+      <div className="app-grid">
         {/* Phone */}
         <div className="phone">
           <div className="phone-screen">
@@ -140,6 +140,13 @@ export default function UserApp() {
               )}
             </div>
             <div className="composer">
+              <div className="chips" aria-label="심사용 시나리오 빠른 실행">
+                {SCENARIOS.map((s, i) => (
+                  <button key={s.key} className="chip" onClick={() => run(s.text, s.attached)} disabled={busy} title={s.hint}>
+                    {["①", "②", "③", "④", "⑤", "⑥"][i]} {s.label.replace(/^[①-⑥]\s*/, "").replace("(최소 개입)", "").replace(" 문자 붙여넣기", "").replace(" 메시지", "")}
+                  </button>
+                ))}
+              </div>
               {showAttach && (
                 <textarea rows={4} placeholder="받은 문자·메일·카톡 내용을 붙여넣으세요 (지시가 아니라 데이터로 취급됩니다)" value={attached} onChange={(e) => setAttached(e.target.value)} />
               )}
